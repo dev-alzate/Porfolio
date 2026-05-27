@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg: 250 250 250;
+    --bg-elevated: 244 244 245;
+    --fg: 24 24 27;
+    --fg-muted: 82 82 91;
+    --fg-subtle: 161 161 170;
+    --border: 228 228 231;
+    --accent: 37 99 235;
+  }
+
+  .dark {
+    --bg: 9 9 11;
+    --bg-elevated: 24 24 27;
+    --fg: 244 244 245;
+    --fg-muted: 161 161 170;
+    --fg-subtle: 113 113 122;
+    --border: 39 39 42;
+    --accent: 96 165 250;
+  }
+
+  * { border-color: rgb(var(--border)); }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background-color: rgb(var(--bg));
+    color: rgb(var(--fg));
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection { background-color: rgb(var(--accent) / 0.3); }
+}
+
+@layer utilities {
+  .text-fg { color: rgb(var(--fg)); }
+  .text-fg-muted { color: rgb(var(--fg-muted)); }
+  .text-fg-subtle { color: rgb(var(--fg-subtle)); }
+  .text-accent { color: rgb(var(--accent)); }
+  .bg-bg { background-color: rgb(var(--bg)); }
+  .bg-bg-elevated { background-color: rgb(var(--bg-elevated)); }
+  .border-border { border-color: rgb(var(--border)); }
+
+  .grid-bg {
+    background-image:
+      linear-gradient(to right, rgb(var(--border) / 0.4) 1px, transparent 1px),
+      linear-gradient(to bottom, rgb(var(--border) / 0.4) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+
+  .mask-radial {
+    -webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 70%);
+    mask-image: radial-gradient(ellipse at center, black 30%, transparent 70%);
+  }
+
+  .mono { font-family: var(--font-mono), ui-monospace, monospace; }
+
+  .status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 9999px;
+    background-color: rgb(34 197 94);
+    box-shadow: 0 0 0 4px rgb(34 197 94 / 0.2);
+    display: inline-block;
+  }
+}
