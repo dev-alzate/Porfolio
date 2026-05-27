@@ -54,14 +54,14 @@ export function Hero() {
             <ArrowUpRight className="h-4 w-4" />
           </a>
 
-  <a
-  href="/CV_Carlos_Alzate_EN.docx"
-  download="CV_Carlos_Alzate_EN.docx"
-  className="inline-flex items-center gap-2 rounded-md px-4 py-2 text-sm font-medium text-fg-muted transition hover:text-fg"
->
-  <FileText className="h-4 w-4" />
-  Descargar CV
-</a>
+          <a
+            href="/CV_Carlos_Alzate_EN.docx"
+            download="CV_Carlos_Alzate_EN.docx"
+            className="inline-flex items-center gap-2 rounded-md px-4 py-2 text-sm font-medium text-fg-muted transition hover:text-fg"
+          >
+            <FileText className="h-4 w-4" />
+            Descargar CV
+          </a>
         </motion.div>
 
         <motion.div
