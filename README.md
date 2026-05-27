@@ -3,14 +3,6 @@
 Portafolio personal de Carlos Andrés Alzate, Desarrollador Web.
 Construido con **Next.js 15 · React 19 · TypeScript · Tailwind CSS · Framer Motion**.
 
-## Empezar
-
-```bash
-npm install
-npm run dev    # http://localhost:3000
-npm run build  # build de producción
-```
-
 ## Estructura
 
 ```
@@ -56,7 +48,7 @@ Edita `src/data/projects.ts` y añade un objeto al array:
   status: "Producción",
   tags: ["React", "TypeScript"],
   highlights: ["Logro 1", "Logro 2"],
-  cover: "/mi-proyecto/cover.jpg",            // opcional
+  cover: "/mi-proyecto/cover.jpg",           
   images: [
     { src: "/mi-proyecto/screen1.jpg", alt: "Pantalla 1", caption: "Dashboard principal" },
     { src: "/mi-proyecto/screen2.jpg", alt: "Pantalla 2", caption: "Vista de usuarios" },
@@ -64,12 +56,3 @@ Edita `src/data/projects.ts` y añade un objeto al array:
   links: { demo: "https://...", repo: "https://..." },
 }
 ```
-
-Coloca las imágenes en `public/mi-proyecto/` y el portafolio las muestra automáticamente.
-
-## Despliegue en Vercel
-
-1. Sube el repo a GitHub.
-2. Entra a [vercel.com](https://vercel.com) → Import Project → selecciona el repo.
-3. Deploy. Te queda en `https://tu-portafolio.vercel.app`.
-4. Para dominio propio: Settings → Domains → Add Domain.
