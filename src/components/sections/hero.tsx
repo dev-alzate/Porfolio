@@ -7,7 +7,7 @@ import { profile } from "@/data/profile";
 export function Hero() {
   return (
     <section className="relative overflow-hidden border-b border-border">
-      <div className="absolute inset-0 grid-bg mask-radial opacity-50" aria-hidden />
+      <div className="pointer-events-none absolute inset-0 grid-bg mask-radial opacity-50" aria-hidden />
 
       <div className="mx-auto flex max-w-5xl flex-col gap-8 px-4 py-24 sm:px-6 md:py-32">
         <motion.div
@@ -53,9 +53,15 @@ export function Hero() {
             Contactar
             <ArrowUpRight className="h-4 w-4" />
           </a>
-          <a href={profile.links.cvEs} className="inline-flex items-center gap-2 rounded-md px-4 py-2 text-sm font-medium text-fg-muted transition hover:text-fg">
-            <FileText className="h-4 w-4" /> CV
-          </a>
+
+  <a
+  href="/CV_Carlos_Alzate_EN.docx"
+  download="CV_Carlos_Alzate_EN.docx"
+  className="inline-flex items-center gap-2 rounded-md px-4 py-2 text-sm font-medium text-fg-muted transition hover:text-fg"
+>
+  <FileText className="h-4 w-4" />
+  Descargar CV
+</a>
         </motion.div>
 
         <motion.div
@@ -70,6 +76,6 @@ export function Hero() {
           </a>
         </motion.div>
       </div>
-    </section>
+    </section >
   );
 }
