@@ -32,8 +32,7 @@ export function Navbar() {
     >
       <nav className="mx-auto flex h-14 max-w-5xl items-center justify-between px-4 sm:px-6">
         <a href="/" className="mono text-sm font-medium text-fg transition hover:text-accent">
-          <span className="text-accent">$</span> {profile.initials.toLowerCase()}
-          <span className="text-fg-subtle">_dev</span>
+          <span className="text-accent">dev-alzate</span> 
         </a>
 
         <ul className="hidden items-center gap-1 md:flex">
