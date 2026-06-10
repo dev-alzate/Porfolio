@@ -86,6 +86,63 @@ export const projects: Project[] = [
     ],
     featured: true,
   },
+  {
+    slug: "pelgy-pos",
+    title: "PELGY POS",
+    shortDescription:
+      "Sistema POS web (PWA) para joyería de charms: ventas en tiempo real, facturas PDF térmicas, panel admin completo y modo offline — todo a $0/mes.",
+    longDescription:
+      "PELGY POS es un sistema de punto de venta web optimizado para vender pulseras de charms personalizados en ferias. Permite registrar ventas desde cualquier dispositivo, genera facturas en PDF formato recibo térmico (80mm) que se suben automáticamente a Supabase Storage y se comparten por WhatsApp, y le da al administrador control total sobre el catálogo, ventas, vendedores y configuración — todo sincronizado en tiempo real con Supabase PostgreSQL. Opera a costo cero usando los free tiers de Supabase y Vercel.",
+    role: "Developer",
+    year: "2026",
+    company: "PELGY",
+    status: "Producción",
+    tags: [
+      "Next.js 14",
+      "Supabase",
+      "TypeScript",
+      "PostgreSQL",
+      "Tailwind CSS",
+      "PWA",
+      "jsPDF",
+      "NextAuth.js",
+      "Vercel",
+    ],
+    highlights: [
+      "Aplicación construida desde cero con Next.js 14, Supabase (PostgreSQL) y TypeScript, operando a $0/mes en free tiers.",
+      "Flujo de dos roles (vendedor + armador vía WhatsApp), panel admin con 7 tabs y catálogo con scroll infinito en tiempo real.",
+      "Generación automática de facturas PDF térmicas (80mm, jsPDF) con subida a Supabase Storage y compartir por WhatsApp.",
+      "Base de datos PostgreSQL con triggers automáticos para numeración de facturas (F-YYYY-XXXX), políticas RLS y buckets de Storage.",
+      "Modo offline con caché de catálogo en localStorage y cola de ventas pendientes que se sincroniza automáticamente al reconectar.",
+      "Importador masivo CSV/Excel con mapeo de formato WooCommerce y creación automática de categorías.",
+    ],
+    cover: "/pelgy-pos/home.png",
+    images: [
+      {
+        src: "/pelgy-pos/home.png",
+        alt: "Pantalla de inicio de PELGY POS",
+        caption:
+          "Pantalla de inicio — acceso al flujo de venta y al panel de administración, optimizada para uso en feria.",
+      },
+      {
+        src: "/pelgy-pos/sale.png",
+        alt: "Pantalla de venta en PELGY POS",
+        caption:
+          "Pantalla de venta — catálogo visual con búsqueda en tiempo real, filtro por categorías, carrito y métodos de pago (efectivo, transferencia, datáfono).",
+      },
+      {
+        src: "/pelgy-pos/admin.png",
+        alt: "Panel de administración en PELGY POS",
+        caption:
+          "Panel de administración — 7 secciones: inicio, configuración, productos, categorías, ventas, importar y vendedores.",
+      },
+    ],
+    links: {
+      demo: "https://pelgystore.vercel.app",
+      repo: "https://github.com/dev-alzate/Charms-app",
+    },
+    featured: true,
+  },
 ];
 
 export const getProject = (slug: string) =>
